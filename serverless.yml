@@ -1,0 +1,12 @@
+service: serverless-full-stack-template
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+
+functions:
+  app:
+    handler: handlers/app.handle
+
+resources:
+  - ${file(./resources/cognito.yml)}
